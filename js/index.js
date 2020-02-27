@@ -62,8 +62,10 @@
           canvas.unbind("click");
           canvas.unbind("mousemove");
           canvas.removeClass('hand');
-
-          document.querySelector('audio').play()
+          
+          const audio = document.querySelector('audio');
+          audio.volume = 0.4;
+          audio.play();
       }
   }).mousemove(function(e){
       var offset = canvas.offset(), x, y;
